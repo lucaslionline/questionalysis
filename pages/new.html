@@ -1,0 +1,87 @@
+---
+layout: default
+title: "新建"
+---
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h2>{{ page.title }}</h2>
+</div>
+
+<div class="row">
+	<div class="col-md-8 order-md-1">
+		<h5>新建项目</h5>
+		<form class="needs-validation" novalidate>
+			<div class="row">
+				<div class="col-md-6 mb-3">
+					<label for="firstName">项目名称</label>
+					<input type="text" class="form-control" id="" placeholder="关于xxx的调查" value="" required>
+				</div>
+				<div class="col-md-6 mb-3">
+					<label for="lastName">客户名称</label>
+					<input type="text" class="form-control" id="" placeholder="xxx公司" value="" required>
+				</div>
+			</div>
+
+
+			<div class="mb-3">
+				<label>项目描述<span class="text-muted">（选填）</span></label>
+				<input type="text" class="form-control" id="" placeholder="">
+			</div>
+
+			<div class="mb-3">
+				<label>选择数据</label>
+				<input type="file" class="form-control">
+			</div>
+
+			
+			<hr>
+			<button class="btn btn-primary btn-sm" type="submit">创建</button>
+		</form>
+	</div>
+
+
+
+
+
+
+	<div class="col-md-4 order-md-2 mb-4">
+		<ul class="list-group mb-3">
+			<li class="list-group-item d-flex justify-content-between lh-condensed">
+				<div>
+					<span>项目ID</span>
+					<small class="text-muted">关于xxx的调查</small>
+				</div>
+				<span class="text-muted">001</span>
+			</li>
+			<li class="list-group-item d-flex justify-content-between lh-condensed">
+				<div>
+					<span>客户ID</span>
+					<small class="text-muted">xxx公司</small>
+				</div>
+				<span class="text-muted">003</span>
+			</li>
+			<li class="list-group-item d-flex justify-content-between lh-condensed">
+				<span>受访人数</span>
+				<span class="text-muted">196</span>
+			</li>
+			<li class="list-group-item d-flex justify-content-between lh-condensed">
+				<span>题目总数</span>
+				<span class="text-muted">25</span>
+			</li>
+			<li class="list-group-item d-flex justify-content-between">
+				<span>创建日期</span>
+				<span class="text-muted">2018-10-30</span>
+			</li>
+		</ul>
+
+
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+		</div>
+	</div>
+</div>
+
+
+<hr>
+<button class="btn btn-primary btn-sm btn-block" type="submit" onclick="javascript:window.location.href='{{ site.baseurl }}/pages/stats.html'"><span data-feather="arrow-down-circle"></span> 数据统计</button>

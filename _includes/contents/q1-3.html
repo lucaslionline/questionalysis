@@ -1,0 +1,63 @@
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="q1-3" style="width:100%; height:300px;"></div>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('q1-3'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{b}: {c} ({d}%)"
+            },
+            toolbox: {
+                feature: {
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['收集员工的建议与投诉', '开展娱乐活动', '协助遇到困难的员工解决问题', '鼓励员工参与工厂改善工作', '向管理者提建设性建', '为员工与管理者协商', '其他，请说明']
+            },
+            series: [
+            {
+                type:'pie',
+                radius: '80%',
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '20'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                {value:Math.floor(Math.random()*50+50), name:'收集员工的建议与投诉'},
+                {value:Math.floor(Math.random()*50+50), name:'开展娱乐活动'},
+                {value:Math.floor(Math.random()*50+50), name:'协助遇到困难的员工解决问题'},
+                {value:Math.floor(Math.random()*50+50), name:'鼓励员工参与工厂改善工作'},
+                {value:Math.floor(Math.random()*50+50), name:'向管理者提建设性建'},
+                {value:Math.floor(Math.random()*50+50), name:'为员工与管理者协商'},
+                {value:Math.floor(Math.random()*50+50), name:'其他，请说明'}
+                ],
+            }
+            ]
+        };
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>

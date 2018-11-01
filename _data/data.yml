@@ -1,0 +1,23 @@
+teams:
+- {num: 1, name: Team HKU, abr: hku, title: S(L)OW House}
+- {num: 2, name: Team PKU, abr: pku, title: SHU}
+- {num: 3, name: Team THU, abr: thu, title: WHAO House}
+- {num: 4, name: Team XJTU-WNEU, abr: xjtu-wneu, title: Xi'an Mass}
+- {num: 5, name: Team YI, abr: yi, title: YI}
+- {num: 6, name: Team WashU-BLD, abr: washu-bld, title: Lotus House}
+- {num: 7, name: Team Istanbul, abr: istanbul, title: ALGAETECH House}
+- {num: 8, name: Team SUES-XD, abr: sues-xd, title: Dancing Sunlight}
+- {num: 9, name: Team Shunya, abr: shunya, title: Project Solarise}
+- {num: 10, name: Team Montreal, abr: montreal, title: Deep-Performance Dwelling}
+- {num: 11, name: Team JIA+, abr: jia, title: JIA+ }
+- {num: 12, name: Team NJFJ, abr: njfj, title: HI-TECH}
+- {num: 13, name: Team TUBSEU, abr: tubseu, title: SEU-TUBS}
+- {num: 14, name: Team XAUAT, abr: xauat, title: Qiju 2.0}
+- {num: 15, name: Team SJTUIUC, abr: sjtuiuc, title: SJTUIUC}
+- {num: 16, name: Team BJTU, abr: bjtu, title: i-Yard 2.0}
+- {num: 17, name: Team SIE, abr: sie, title: Smart Nest}
+- {num: 18, name: Team TJU-TUDA, abr: tju-tuda, title: Solar House}
+- {num: 19, name: Team Solar Offspring, abr: solar-offspring, title: R. E. A. L House}
+- {num: 20, name: Team SCUT-POLITO, abr: scut-polito, title: SCUT-POLITO}
+- {num: 21, name: Team UNNC Alpha, abr: unnc-alpha, title: Duo Pension House}
+- {num: 22, name: Team Israel, abr: israel, title: The Cactus Home}

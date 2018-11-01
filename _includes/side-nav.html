@@ -1,0 +1,63 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+	<div class="sidebar-sticky">
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'home' %}active{% endif %}" href="{{ site.baseurl }}/pages/home.html">
+					<span data-feather="home"></span>
+					首页 <span class="sr-only">(current)</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'new' %}active{% endif %}" href="{{ site.baseurl }}/pages/new.html">
+					<span data-feather="plus-square"></span>
+					新建
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'stats' %}active{% endif %}" href="{{ site.baseurl }}/pages/stats.html">
+					<span data-feather="bar-chart-2"></span>
+					统计
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'analysis' %}active{% endif %}" href="{{ site.baseurl }}/pages/analysis.html">
+					<span data-feather="pie-chart"></span>
+					分析
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'report' %}active{% endif %}" href="{{ site.baseurl }}/pages/report.html">
+					<span data-feather="file-text"></span>
+					报告
+				</a>
+			</li>
+		</ul>
+
+		<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+			<span>数据库</span>
+			<a class="d-flex align-items-center text-muted" href="#">
+				<span data-feather="plus-circle"></span>
+			</a>
+		</h6>
+		<ul class="nav flex-column mb-2">
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'projects' %}active{% endif %}" href="{{ site.baseurl }}/pages/projects.html">
+					<span data-feather="database"></span>
+					项目库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'clients' %}active{% endif %}" href="{{ site.baseurl }}/pages/clients.html">
+					<span data-feather="database"></span>
+					客户库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {% if page.url contains 'questions' %}active{% endif %}" href="{{ site.baseurl }}/pages/questions.html">
+					<span data-feather="database"></span>
+					题库
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>

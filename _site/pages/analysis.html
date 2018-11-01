@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+
+	<title>问卷分析 | 分析</title>
+	
+
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/custom.css">
+
+	
+	<script src="/questionnaire/assets/js/echarts.js"></script>
+	<script src="/questionnaire/assets/js/dataTool.js"></script>
+</head>
+
+</head>
+
+<body>
+	<header>
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/questionnaire/pages/home.html">
+			<span data-feather="activity"></span>
+			问卷分析
+		</a>
+		<input class="form-control form-control-dark w-100" type="text" placeholder="搜索" aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="/questionnaire/">退出</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+	<div class="sidebar-sticky">
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/home.html">
+					<span data-feather="home"></span>
+					首页 <span class="sr-only">(current)</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/new.html">
+					<span data-feather="plus-square"></span>
+					新建
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/stats.html">
+					<span data-feather="bar-chart-2"></span>
+					统计
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="/questionnaire/pages/analysis.html">
+					<span data-feather="pie-chart"></span>
+					分析
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/report.html">
+					<span data-feather="file-text"></span>
+					报告
+				</a>
+			</li>
+		</ul>
+
+		<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+			<span>数据库</span>
+			<a class="d-flex align-items-center text-muted" href="#">
+				<span data-feather="plus-circle"></span>
+			</a>
+		</h6>
+		<ul class="nav flex-column mb-2">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/projects.html">
+					<span data-feather="database"></span>
+					项目库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/clients.html">
+					<span data-feather="database"></span>
+					客户库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/questions.html">
+					<span data-feather="database"></span>
+					题库
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h2>分析</h2>
+</div>
+
+
+<div class="row">
+	<div class="col-6">
+		<h5>横向</h5>
+		<p>横向分析针对同一问卷题目提供本客户本次调查与其它客户历史反馈结果的对比</p>
+		<p>
+			<select class="custom-select d-block w-100" id="">
+				<option value="">选择题目...</option>
+				<option>1.1 工厂有员工代表吗？</option>
+				<option>1.2 如果想找员工代表反映问题，您知道可以找谁吗？</option>
+				<option>1.4 您对目前员工代表开展工作的整体评价</option>
+				<option>1.5 您觉得工厂需要有员工代表吗？</option>
+				<option>1.6 您愿意成为员工代表吗？</option>
+				<option>3.5 您对工厂处理员工投诉/申诉的整体评价</option>
+				<option>4.3 你进厂以后受到过奖励吗？</option>
+				<option>4.4 工厂制定激励机制(如奖励、晋升)时了解了工人的想法</option>
+				<option>4.5 你对本工厂的工人激励/奖励制度</option>
+				<option>5.2 当工人和管理者意见不一致时，目前工人主要采取以下哪种方式？</option>
+				<option>5.4 在过去的1年，你对工厂提过改善建议吗？</option>
+				<option>6.1 我的上级安排工作时，会了解下属的困难</option>
+				<option>6.2 我的上级能充分调动下属的工作积极性</option>
+				<option>6.3 我的上级乐意听取员工的意见</option>
+				<option>6.4 工作中遇到困难时，我的上级会主动给予帮助</option>
+				<option>6.5 我满意上级的管理方式</option>
+				<option>7.1 工厂鼓励员工提改善建议</option>
+				<option>7.2 工厂重视员工的需求</option>
+				<option>7.3 管理者尊重员工</option>
+				<option>7.4 管理者能公平对待员工</option>
+				<option>7.5 工人在班组内可以自由发表意见</option>
+				<option>8.3 你对班组目前的生产效率评价是</option>
+				<option>8.4 您对本厂工人与管理者之间沟通的整体评价</option>
+				<option>8.5 您对工厂的整体满意度</option>
+			</select>
+		</p>
+
+
+		<p>
+			<select class="custom-select d-block w-100" id="">
+				<option value="">选择对比项目...</option>
+				<option>2015年xxx机构关于xxx的调查</option>
+				<option>2012年xxx单位关于xxx的调查</option>
+			</select>
+		</p>
+
+		<button class="btn btn-primary btn-sm" type="submit"><span data-feather="plus"></span></button>
+		<button class="btn btn-primary btn-sm" type="submit">对比</button>
+
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="analysis1" style="width:100%; height:350px;"></div>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('analysis1'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            legend: {
+                data: ['xxx公司', 'xxx机构', 'xxx单位']
+            },
+            xAxis: {
+                type: 'category',
+                data: ['有', '无', '不确定']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            tooltip: {},
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {show: true},
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            series: [{
+                name: 'xxx公司',
+                type: 'bar',
+                barGap: 0,
+                itemStyle: { 
+                    normal: {
+                        label: {
+                            show: true, 
+                            position: 'top'
+                        }
+                    }
+                },
+                data: [
+                Math.floor(Math.random()*30+30), 
+                Math.floor(Math.random()*50+50), 
+                Math.floor(Math.random()*20+20)
+                ],
+            }, {
+                name: 'xxx机构',
+                type: 'bar',
+                itemStyle: { 
+                    normal: {
+                        label: {
+                            show: true, 
+                            position: 'top'
+                        }
+                    }
+                },
+                data: [
+                Math.floor(Math.random()*50+50), 
+                Math.floor(Math.random()*20+20), 
+                Math.floor(Math.random()*30+30)
+                ],
+            }, {
+                name: 'xxx单位',
+                type: 'bar',
+                itemStyle: { 
+                    normal: {
+                        label: {
+                            show: true, 
+                            position: 'top'
+                        }
+                    }
+                },
+                data: [
+                Math.floor(Math.random()*20+20), 
+                Math.floor(Math.random()*30+30), 
+                Math.floor(Math.random()*50+50)
+                ],
+            },
+            ]
+        };
+
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+	</div>
+
+
+
+
+	<div class="col-6">
+		<h5>纵向</h5>
+		<p>纵向分析针对同一问卷题目提供本客户本次调查与本客户历史反馈结果的对比</p>
+		<p>
+			<select class="custom-select d-block w-100" id="">
+				<option value="">选择题目...</option>
+				<option>1.1 工厂有员工代表吗？</option>
+				<option>1.2 如果想找员工代表反映问题，您知道可以找谁吗？</option>
+				<option>1.4 您对目前员工代表开展工作的整体评价</option>
+				<option>1.5 您觉得工厂需要有员工代表吗？</option>
+				<option>1.6 您愿意成为员工代表吗？</option>
+				<option>3.5 您对工厂处理员工投诉/申诉的整体评价</option>
+				<option>4.3 你进厂以后受到过奖励吗？</option>
+				<option>4.4 工厂制定激励机制(如奖励、晋升)时了解了工人的想法</option>
+				<option>4.5 你对本工厂的工人激励/奖励制度</option>
+				<option>5.2 当工人和管理者意见不一致时，目前工人主要采取以下哪种方式？</option>
+				<option>5.4 在过去的1年，你对工厂提过改善建议吗？</option>
+				<option>6.1 我的上级安排工作时，会了解下属的困难</option>
+				<option>6.2 我的上级能充分调动下属的工作积极性</option>
+				<option>6.3 我的上级乐意听取员工的意见</option>
+				<option>6.4 工作中遇到困难时，我的上级会主动给予帮助</option>
+				<option>6.5 我满意上级的管理方式</option>
+				<option>7.1 工厂鼓励员工提改善建议</option>
+				<option>7.2 工厂重视员工的需求</option>
+				<option>7.3 管理者尊重员工</option>
+				<option>7.4 管理者能公平对待员工</option>
+				<option>7.5 工人在班组内可以自由发表意见</option>
+				<option>8.3 你对班组目前的生产效率评价是</option>
+				<option>8.4 您对本厂工人与管理者之间沟通的整体评价</option>
+				<option>8.5 您对工厂的整体满意度</option>
+			</select>
+		</p>
+
+		<p>
+			<select class="custom-select d-block w-100" id="">
+				<option value="">选择对比项目...</option>
+				<option>2015年xxx公司关于xxx的调查</option>
+				<option>2012年xxx公司关于xxx的调查</option>
+			</select>
+		</p>
+
+		<button class="btn btn-primary btn-sm" type="submit"><span data-feather="plus"></span></button>
+		<button class="btn btn-primary btn-sm" type="submit">对比</button>
+
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="analysis2" style="width:100%; height:350px;"></div>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('analysis2'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            legend: {
+                data: ['2018年', '2015年', '2012年']
+            },
+            xAxis: {
+                type: 'category',
+                data: ['有', '无', '不确定']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            tooltip: {},
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {show: true},
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            series: [{
+                name: '2018年',
+                type: 'bar',
+                barGap: 0,
+                itemStyle: { 
+                    normal: {
+                        label: {
+                            show: true, 
+                            position: 'top'
+                        }
+                    }
+                },
+                data: [
+                Math.floor(Math.random()*30+30), 
+                Math.floor(Math.random()*50+50), 
+                Math.floor(Math.random()*20+20)
+                ],
+            }, {
+                name: '2015年',
+                type: 'bar',
+                itemStyle: { 
+                    normal: {
+                        label: {
+                            show: true, 
+                            position: 'top'
+                        }
+                    }
+                },
+                data: [
+                Math.floor(Math.random()*50+50), 
+                Math.floor(Math.random()*20+20), 
+                Math.floor(Math.random()*30+30)
+                ],
+            }, {
+                name: '2012年',
+                type: 'bar',
+                itemStyle: { 
+                    normal: {
+                        label: {
+                            show: true, 
+                            position: 'top'
+                        }
+                    }
+                },
+                data: [
+                Math.floor(Math.random()*20+20), 
+                Math.floor(Math.random()*30+30), 
+                Math.floor(Math.random()*50+50)
+                ],
+            },
+            ]
+        };
+
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+	</div>
+</div>
+
+
+<hr>
+<button class="btn btn-primary btn-sm btn-block" type="submit" onclick="javascript:window.location.href='/questionnaire/pages/report.html'"><span data-feather="arrow-down-circle"></span> 生成报告</button>
+
+				<hr>
+<footer class="small gray">
+	<p>
+		<span>&copy;</span>
+		问卷分析
+		<span><script type="text/javascript">document.write(new Date().getFullYear());</script></span>
+		广州市时线咨询服务有限公司 版权所有
+		<span class="float-right">Designed by LUCAS</span>
+	</p>
+</footer>
+
+
+<script src="/questionnaire/assets/js/jquery-3.2.1.slim.min.js"></script>
+<script src="/questionnaire/assets/js/jquery-1.11.3.js"></script>
+<script src="/questionnaire/assets/js/popper.min.js"></script>
+<script src="/questionnaire/assets/js/bootstrap.min.js"></script>
+<script src="/questionnaire/assets/js/feather.min.js"></script>
+<script>
+feather.replace()
+</script>
+			</main>
+		</div>
+	</div>
+</body>
+</html>

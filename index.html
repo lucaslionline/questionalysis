@@ -1,0 +1,42 @@
+---
+title: "登录"
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include head.html %}
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/signin.css">
+</head>
+
+<body>
+	<div class="container">
+		<form class="form-signin" role="form" action="{{ site.baseurl }}/pages/dashboard.html">
+			<center>
+				<img src="{{ site.baseurl }}/assets/img/logo.png" width="90%" class="mb-3">
+				<h2 style="letter-spacing: 0.2em;">问卷分析</h2>
+			</center>
+			<br>
+			<input type="text" class="form-control" placeholder="用户名" required autofocus>
+			<input type="password" class="form-control" placeholder="密码" required>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="remember-me"> 记住我
+				</label>
+			</div>
+			<button class="btn btn-sm btn-primary btn-block" type="submit">登录</button>
+			<br>
+			<a href="{{ site.baseurl }}/pages/home.html">以访客身份登录</a>
+
+			<hr>
+			<footer class="small gray">
+				<p>
+					<span>&copy;</span>
+					问卷分析 广州市时线咨询服务有限公司 版权所有
+				</p>
+			</footer>
+		</form>
+	</div>
+</body>
+</html>

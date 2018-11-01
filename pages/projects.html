@@ -1,0 +1,92 @@
+---
+layout: default
+title: "项目库"
+---
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h2>{{ page.title }}</h2>
+</div>
+
+<p><input class="form-control w-100" type="text" placeholder="查询"></p>
+
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>项目ID</th>
+				<th>项目名称</th>
+				<th>客户名称</th>
+				<th>受访人数</th>
+				<th>题目总数</th>
+				<th>创建日期</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>001</td>
+				<td>关于xxx的调查问卷</td>
+				<td>xxx公司</td>
+				<td>196</td>
+				<td>25</td>
+				<td>2018-10-30</td>
+				<td>
+					<button class="btn btn-sm btn-primary" onclick="javascript:window.location.href='{{ site.baseurl }}/pages/stats.html'">查看</button>
+					<button class="btn btn-sm btn-primary">删除</button>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>002</td>
+				<td>关于xxx的调查问卷</td>
+				<td>xxx工厂</td>
+				<td>29</td>
+				<td>205</td>
+				<td>2018-07-02</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>003</td>
+				<td>关于xxx的调查问卷</td>
+				<td>xxx单位</td>
+				<td>39</td>
+				<td>40</td>
+				<td>2018-06-28</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>004</td>
+				<td>关于xxx的调查问卷</td>
+				<td>xxx机构</td>
+				<td>149</td>
+				<td>20</td>
+				<td>2018-03-14</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>005</td>
+				<td>关于xxx的调查问卷</td>
+				<td>xxx协会</td>
+				<td>19</td>
+				<td>23</td>
+				<td>2018-02-15</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+
+	<title>问卷分析 | Welcome to Jekyll!</title>
+	
+
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/custom.css">
+
+	
+	<script src="/questionnaire/assets/js/echarts.js"></script>
+	<script src="/questionnaire/assets/js/dataTool.js"></script>
+</head>
+
+</head>
+
+<body>
+	<header>
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/questionnaire/pages/home.html">
+			<span data-feather="activity"></span>
+			问卷分析
+		</a>
+		<input class="form-control form-control-dark w-100" type="text" placeholder="搜索" aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="/questionnaire/">退出</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+	<div class="sidebar-sticky">
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/home.html">
+					<span data-feather="home"></span>
+					首页 <span class="sr-only">(current)</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/new.html">
+					<span data-feather="plus-square"></span>
+					新建
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/stats.html">
+					<span data-feather="bar-chart-2"></span>
+					统计
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/analysis.html">
+					<span data-feather="pie-chart"></span>
+					分析
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/report.html">
+					<span data-feather="file-text"></span>
+					报告
+				</a>
+			</li>
+		</ul>
+
+		<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+			<span>数据库</span>
+			<a class="d-flex align-items-center text-muted" href="#">
+				<span data-feather="plus-circle"></span>
+			</a>
+		</h6>
+		<ul class="nav flex-column mb-2">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/projects.html">
+					<span data-feather="database"></span>
+					项目库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/clients.html">
+					<span data-feather="database"></span>
+					客户库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/questions.html">
+					<span data-feather="database"></span>
+					题库
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+				<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
+    <p class="post-meta">
+      <time datetime="2018-01-13T22:56:00+08:00" itemprop="datePublished">
+        
+        Jan 13, 2018
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+
+  </div>
+
+  
+</article>
+
+
+				<hr>
+<footer class="small gray">
+	<p>
+		<span>&copy;</span>
+		问卷分析
+		<span><script type="text/javascript">document.write(new Date().getFullYear());</script></span>
+		广州市时线咨询服务有限公司 版权所有
+		<span class="float-right">Designed by LUCAS</span>
+	</p>
+</footer>
+
+
+<script src="/questionnaire/assets/js/jquery-3.2.1.slim.min.js"></script>
+<script src="/questionnaire/assets/js/jquery-1.11.3.js"></script>
+<script src="/questionnaire/assets/js/popper.min.js"></script>
+<script src="/questionnaire/assets/js/bootstrap.min.js"></script>
+<script src="/questionnaire/assets/js/feather.min.js"></script>
+<script>
+feather.replace()
+</script>
+			</main>
+		</div>
+	</div>
+</body>
+</html>

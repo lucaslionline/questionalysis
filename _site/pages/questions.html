@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+
+	<title>问卷分析 | 题库</title>
+	
+
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/custom.css">
+
+	
+	<script src="/questionnaire/assets/js/echarts.js"></script>
+	<script src="/questionnaire/assets/js/dataTool.js"></script>
+</head>
+
+</head>
+
+<body>
+	<header>
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/questionnaire/pages/home.html">
+			<span data-feather="activity"></span>
+			问卷分析
+		</a>
+		<input class="form-control form-control-dark w-100" type="text" placeholder="搜索" aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="/questionnaire/">退出</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+	<div class="sidebar-sticky">
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/home.html">
+					<span data-feather="home"></span>
+					首页 <span class="sr-only">(current)</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/new.html">
+					<span data-feather="plus-square"></span>
+					新建
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/stats.html">
+					<span data-feather="bar-chart-2"></span>
+					统计
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/analysis.html">
+					<span data-feather="pie-chart"></span>
+					分析
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/report.html">
+					<span data-feather="file-text"></span>
+					报告
+				</a>
+			</li>
+		</ul>
+
+		<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+			<span>数据库</span>
+			<a class="d-flex align-items-center text-muted" href="#">
+				<span data-feather="plus-circle"></span>
+			</a>
+		</h6>
+		<ul class="nav flex-column mb-2">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/projects.html">
+					<span data-feather="database"></span>
+					项目库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/clients.html">
+					<span data-feather="database"></span>
+					客户库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="/questionnaire/pages/questions.html">
+					<span data-feather="database"></span>
+					题库
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h2>题库</h2>
+</div>
+
+<p><input class="form-control w-100" type="text" placeholder="查询"></p>
+
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>题目ID</th>
+				<th>题干</th>
+				<th>类型</th>
+				<th>选项</th>
+				<th>使用次数</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>001</td>
+				<td>你进厂以后受到过奖励吗？</td>
+				<td>单选</td>
+				<td>1 有；2 没有；3 不知道</td>
+				<td>6</td>
+				<td>
+					<button class="btn btn-sm btn-primary">查看</button>
+					<button class="btn btn-sm btn-primary">删除</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>002</td>
+				<td>工厂有员工代表吗？</td>
+				<td>单选</td>
+				<td>1 有；2 没有；3 不知道</td>
+				<td>3</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>003</td>
+				<td>您愿意成为员工代表吗？</td>
+				<td>单选</td>
+				<td>1 愿意；2 不愿意；3 不知道</td>
+				<td>3</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>004</td>
+				<td>您的出生年份</td>
+				<td>问答</td>
+				<td>/</td>
+				<td>15</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>005</td>
+				<td>在过去的1年，你对工厂提过改善建议吗？</td>
+				<td>单选</td>
+				<td>1 有；2 没有；3 不知道</td>
+				<td>5</td>
+				<td>
+					<button class="btn btn-sm btn-outline-primary">查看</button>
+					<button class="btn btn-sm btn-outline-primary">删除</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+				<hr>
+<footer class="small gray">
+	<p>
+		<span>&copy;</span>
+		问卷分析
+		<span><script type="text/javascript">document.write(new Date().getFullYear());</script></span>
+		广州市时线咨询服务有限公司 版权所有
+		<span class="float-right">Designed by LUCAS</span>
+	</p>
+</footer>
+
+
+<script src="/questionnaire/assets/js/jquery-3.2.1.slim.min.js"></script>
+<script src="/questionnaire/assets/js/jquery-1.11.3.js"></script>
+<script src="/questionnaire/assets/js/popper.min.js"></script>
+<script src="/questionnaire/assets/js/bootstrap.min.js"></script>
+<script src="/questionnaire/assets/js/feather.min.js"></script>
+<script>
+feather.replace()
+</script>
+			</main>
+		</div>
+	</div>
+</body>
+</html>

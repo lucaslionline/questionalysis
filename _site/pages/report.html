@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+
+	<title>问卷分析 | 报告</title>
+	
+
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="/questionnaire/assets/css/custom.css">
+
+	
+	<script src="/questionnaire/assets/js/echarts.js"></script>
+	<script src="/questionnaire/assets/js/dataTool.js"></script>
+</head>
+
+</head>
+
+<body>
+	<header>
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/questionnaire/pages/home.html">
+			<span data-feather="activity"></span>
+			问卷分析
+		</a>
+		<input class="form-control form-control-dark w-100" type="text" placeholder="搜索" aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="/questionnaire/">退出</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+	<div class="sidebar-sticky">
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/home.html">
+					<span data-feather="home"></span>
+					首页 <span class="sr-only">(current)</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/new.html">
+					<span data-feather="plus-square"></span>
+					新建
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/stats.html">
+					<span data-feather="bar-chart-2"></span>
+					统计
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/analysis.html">
+					<span data-feather="pie-chart"></span>
+					分析
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="/questionnaire/pages/report.html">
+					<span data-feather="file-text"></span>
+					报告
+				</a>
+			</li>
+		</ul>
+
+		<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+			<span>数据库</span>
+			<a class="d-flex align-items-center text-muted" href="#">
+				<span data-feather="plus-circle"></span>
+			</a>
+		</h6>
+		<ul class="nav flex-column mb-2">
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/projects.html">
+					<span data-feather="database"></span>
+					项目库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/clients.html">
+					<span data-feather="database"></span>
+					客户库
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/questionnaire/pages/questions.html">
+					<span data-feather="database"></span>
+					题库
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h2>报告</h2>
+</div>
+
+<p class="text-primary">选择需要生成报告的内容：</p>
+
+<h6>项目信息</h6>
+<ul class="list-unstyled checkoption">
+	<li><label><input type="checkbox"> 全选</label></li>
+	<li><label><input type="checkbox"> 项目名称</label></li>
+	<li><label><input type="checkbox"> 客户名称</label></li>
+	<li><label><input type="checkbox"> 题目总数</label></li>
+	<li><label><input type="checkbox"> 创建日期</label></li>
+</ul>
+
+<h6>用户信息</h6>
+<ul class="list-unstyled checkoption">
+	<li><label><input type="checkbox"> 全选</label></li>
+	<li><label><input type="checkbox"> 受访人数</label></li>
+	<li><label><input type="checkbox"> 性别</label></li>
+	<li><label><input type="checkbox"> 年龄</label></li>
+	<li><label><input type="checkbox"> 地域</label></li>
+</ul>
+
+<h6>数据统计</h6>
+<div class="row mb-3">
+	<div class="col-4">
+		<strong>单选题</strong>
+		<div class="fixHeight">
+			<ul class="list-unstyled">
+				<li><label><input type="checkbox"> 全选</label></li>
+				<li><label><input type="checkbox"> 1.1 工厂有员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 1.2 如果想找员工代表反映问题，您知道可以找谁吗？</label></li>
+				<li><label><input type="checkbox"> 1.4 您对目前员工代表开展工作的整体评价</label></li>
+				<li><label><input type="checkbox"> 1.5 您觉得工厂需要有员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 1.6 您愿意成为员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 3.5 您对工厂处理员工投诉/申诉的整体评价</label></li>
+				<li><label><input type="checkbox"> 4.3 你进厂以后受到过奖励吗？</label></li>
+				<li><label><input type="checkbox"> 4.4 工厂制定激励机制(如奖励、晋升)时了解了工人的想法</label></li>
+				<li><label><input type="checkbox"> 4.5 你对本工厂的工人激励/奖励制度</label></li>
+				<li><label><input type="checkbox"> 5.2 当工人和管理者意见不一致时，目前工人主要采取以下哪种方式？</label></li>
+				<li><label><input type="checkbox"> 5.4 在过去的1年，你对工厂提过改善建议吗？</label></li>
+				<li><label><input type="checkbox"> 6.1 我的上级安排工作时，会了解下属的困难</label></li>
+				<li><label><input type="checkbox"> 6.2 我的上级能充分调动下属的工作积极性</label></li>
+				<li><label><input type="checkbox"> 6.3 我的上级乐意听取员工的意见</label></li>
+				<li><label><input type="checkbox"> 6.4 工作中遇到困难时，我的上级会主动给予帮助</label></li>
+				<li><label><input type="checkbox"> 6.5 我满意上级的管理方式</label></li>
+				<li><label><input type="checkbox"> 7.1 工厂鼓励员工提改善建议</label></li>
+				<li><label><input type="checkbox"> 7.2 工厂重视员工的需求</label></li>
+				<li><label><input type="checkbox"> 7.3 管理者尊重员工</label></li>
+				<li><label><input type="checkbox"> 7.4 管理者能公平对待员工</label></li>
+				<li><label><input type="checkbox"> 7.5 工人在班组内可以自由发表意见</label></li>
+				<li><label><input type="checkbox"> 8.3 你对班组目前的生产效率评价是</label></li>
+				<li><label><input type="checkbox"> 8.4 您对本厂工人与管理者之间沟通的整体评价</label></li>
+				<li><label><input type="checkbox"> 8.5 您对工厂的整体满意度</label></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="col-4">
+		<strong>多选题</strong>
+		<div class="fixHeight">
+			<ul class="list-unstyled">
+				<li><label><input type="checkbox"> 全选</label></li>
+				<li><label><input type="checkbox"> 1.3 应如何增强工厂与员工之间的互动</label></li>
+				<li><label><input type="checkbox"> 2.1 以下工厂与员工的沟通渠道最为有效</label></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="col-4">
+		<strong>问答题</strong>
+		<div class="fixHeight">
+			<ul class="list-unstyled">
+				<li><label><input type="checkbox"> 全选</label></li>
+				<li><label><input type="checkbox"> 9.1 您的出生年份</label></li>
+				<li><label><input type="checkbox"> 9.2 您的性别</label></li>
+				<li><label><input type="checkbox"> 9.3 你的婚姻状况</label></li>
+				<li><label><input type="checkbox"> 9.4 您来自哪里？</label></li>
+				<li><label><input type="checkbox"> 9.5 你在这家工厂累积工作多长时间了？一共工作了___年___月(填空1)</label></li>
+				<li><label><input type="checkbox"> 9.5 你在这家工厂累积工作多长时间了？一共工作了___年___月(填空2)</label></li>
+				<li><label><input type="checkbox"> 9.6 您是员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 9.7 您目前的职位是？</label></li>
+				<li><label><input type="checkbox"> 9.8 你目前打算继续在本厂工作多长时间？</label></li>
+				<li><label><input type="checkbox"> 10 为了促进本厂工人与管理者之间的沟通，您会建议工厂进行哪些改善？</label></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<h6>结果分析</h6>
+
+<ul class="list-unstyled checkoption mb-0">
+	<li><label><input type="checkbox"> 全选</label></li>
+	<li><label><input type="checkbox"> 横向对比</label></li>
+	<li><label><input type="checkbox"> 纵向对比</label></li>
+</ul>
+
+<div class="row mb-3">
+	<div class="col-4">
+		<strong>单选题</strong>
+		<div class="fixHeight">
+			<ul class="list-unstyled">
+				<li><label><input type="checkbox"> 全选</label></li>
+				<li><label><input type="checkbox"> 1.1 工厂有员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 1.2 如果想找员工代表反映问题，您知道可以找谁吗？</label></li>
+				<li><label><input type="checkbox"> 1.4 您对目前员工代表开展工作的整体评价</label></li>
+				<li><label><input type="checkbox"> 1.5 您觉得工厂需要有员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 1.6 您愿意成为员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 3.5 您对工厂处理员工投诉/申诉的整体评价</label></li>
+				<li><label><input type="checkbox"> 4.3 你进厂以后受到过奖励吗？</label></li>
+				<li><label><input type="checkbox"> 4.4 工厂制定激励机制(如奖励、晋升)时了解了工人的想法</label></li>
+				<li><label><input type="checkbox"> 4.5 你对本工厂的工人激励/奖励制度</label></li>
+				<li><label><input type="checkbox"> 5.2 当工人和管理者意见不一致时，目前工人主要采取以下哪种方式？</label></li>
+				<li><label><input type="checkbox"> 5.4 在过去的1年，你对工厂提过改善建议吗？</label></li>
+				<li><label><input type="checkbox"> 6.1 我的上级安排工作时，会了解下属的困难</label></li>
+				<li><label><input type="checkbox"> 6.2 我的上级能充分调动下属的工作积极性</label></li>
+				<li><label><input type="checkbox"> 6.3 我的上级乐意听取员工的意见</label></li>
+				<li><label><input type="checkbox"> 6.4 工作中遇到困难时，我的上级会主动给予帮助</label></li>
+				<li><label><input type="checkbox"> 6.5 我满意上级的管理方式</label></li>
+				<li><label><input type="checkbox"> 7.1 工厂鼓励员工提改善建议</label></li>
+				<li><label><input type="checkbox"> 7.2 工厂重视员工的需求</label></li>
+				<li><label><input type="checkbox"> 7.3 管理者尊重员工</label></li>
+				<li><label><input type="checkbox"> 7.4 管理者能公平对待员工</label></li>
+				<li><label><input type="checkbox"> 7.5 工人在班组内可以自由发表意见</label></li>
+				<li><label><input type="checkbox"> 8.3 你对班组目前的生产效率评价是</label></li>
+				<li><label><input type="checkbox"> 8.4 您对本厂工人与管理者之间沟通的整体评价</label></li>
+				<li><label><input type="checkbox"> 8.5 您对工厂的整体满意度</label></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="col-4">
+		<strong>多选题</strong>
+		<div class="fixHeight">
+			<ul class="list-unstyled">
+				<li><label><input type="checkbox"> 全选</label></li>
+				<li><label><input type="checkbox"> 1.3 应如何增强工厂与员工之间的互动</label></li>
+				<li><label><input type="checkbox"> 2.1 以下工厂与员工的沟通渠道最为有效</label></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="col-4">
+		<strong>问答题</strong>
+		<div class="fixHeight">
+			<ul class="list-unstyled">
+				<li><label><input type="checkbox"> 全选</label></li>
+				<li><label><input type="checkbox"> 9.1 您的出生年份</label></li>
+				<li><label><input type="checkbox"> 9.2 您的性别</label></li>
+				<li><label><input type="checkbox"> 9.3 你的婚姻状况</label></li>
+				<li><label><input type="checkbox"> 9.4 您来自哪里？</label></li>
+				<li><label><input type="checkbox"> 9.5 你在这家工厂累积工作多长时间了？一共工作了___年___月(填空1)</label></li>
+				<li><label><input type="checkbox"> 9.5 你在这家工厂累积工作多长时间了？一共工作了___年___月(填空2)</label></li>
+				<li><label><input type="checkbox"> 9.6 您是员工代表吗？</label></li>
+				<li><label><input type="checkbox"> 9.7 您目前的职位是？</label></li>
+				<li><label><input type="checkbox"> 9.8 你目前打算继续在本厂工作多长时间？</label></li>
+				<li><label><input type="checkbox"> 10 为了促进本厂工人与管理者之间的沟通，您会建议工厂进行哪些改善？</label></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<button class="btn btn-primary btn-sm" type="submit">生成报告</button>
+
+
+<hr>
+<button class="btn btn-primary btn-sm btn-block" type="submit" onclick="javascript:window.location.href='/questionnaire/assets/doc/report-001-003-01.pdf'"><span data-feather="arrow-down-circle"></span> 下载报告</button>
+
+				<hr>
+<footer class="small gray">
+	<p>
+		<span>&copy;</span>
+		问卷分析
+		<span><script type="text/javascript">document.write(new Date().getFullYear());</script></span>
+		广州市时线咨询服务有限公司 版权所有
+		<span class="float-right">Designed by LUCAS</span>
+	</p>
+</footer>
+
+
+<script src="/questionnaire/assets/js/jquery-3.2.1.slim.min.js"></script>
+<script src="/questionnaire/assets/js/jquery-1.11.3.js"></script>
+<script src="/questionnaire/assets/js/popper.min.js"></script>
+<script src="/questionnaire/assets/js/bootstrap.min.js"></script>
+<script src="/questionnaire/assets/js/feather.min.js"></script>
+<script>
+feather.replace()
+</script>
+			</main>
+		</div>
+	</div>
+</body>
+</html>
